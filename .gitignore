@@ -1,0 +1,4 @@
+# files containing sensitive information --
+# copy sample files and fill in missing values!
+agent.cfg
+hooks/environment

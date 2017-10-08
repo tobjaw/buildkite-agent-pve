@@ -1,0 +1,16 @@
+#!/bin/bash
+
+set -euo pipefail
+
+# add github RSA key
+eval "$(ssh-agent -s)"
+ssh-add -k /buildkite/secrets/id_rsa
+
+#  pipeline specific exports
+if [ ${BUILDKITE_PIPELINE_SLUG} = "thesis-bachelor" ]
+then
+   # webdav secrets
+   export WEBDAV_USERNAME="WEBDAV-USERNAME-HERE"
+   export WEBDAV_PASSWORD="WEBDAV-PASSWORD-HERE"
+   export WEBDAV_URL="https://example.com/remote.php/webdav"
+fi
