@@ -1,0 +1,13 @@
+* buildkite-agent-pve
+  dockerized [[https://buildkite.com][buildkite]] agent
+
+  for personal usage on [[https://www.proxmox.com][proxmox virtual environment]], but should work on any linux distribution with docker installed
+** setup
+   #+BEGIN_SRC bash
+     cd /opt && \
+     git clone git@github.com:tobjaw/buildkite-agent-pve.git buildkite-agent && \
+     cd buildkite-agent
+   #+END_SRC
+   * copy and edit sample files
+   * add RSA keys to =secrets/=
+   * =./run.sh=
